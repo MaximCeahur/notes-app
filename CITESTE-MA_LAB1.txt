@@ -1,0 +1,28 @@
+LABORATORUL 1 — VARIANTA 1: SCOALA / PORT 8081
+
+Acest ZIP contine DOAR fisierele modificate si scripturile de verificare,
+nu intregul proiect al profesorului. Copiaza-l PESTE propriul clone notes-app.
+
+1) Pe GitHub, deschide https://github.com/sergiuchilat/notes-app
+   -> Use this template -> Create a new repository -> Public, nume: notes-app.
+2) In terminal: git clone https://github.com/UTILIZATORUL_TAU/notes-app.git
+3) Dezarhiveaza acest ZIP peste folderul notes-app, pastrand structura.
+4) Intra in folderul notes-app si ruleaza:
+   bash lab1-tools/01-pregatire.sh
+   docker compose down -v      # ATENTIE: sterge datele locale ale acestui proiect!
+   docker compose up -d --build
+   bash lab1-tools/02-verificare.sh
+5) Intra pe http://localhost:8081; autentificare demo: alice / alice123.
+6) Fa capturile de ecran reale cerute la Pasul 7 si insereaza-le in raport.
+7) Nu incarca .env! Verifica: git status, git check-ignore .env
+8) Salveaza in propriul GitHub:
+   git add .
+   git commit -m "Lab 1: secrete in .env, porturi inchise, fara root"
+   git push
+9) Completeaza in raport: numele, grupa, link-ul GitHub si rezultatele reale.
+
+Daca browserul nu se conecteaza: docker compose logs db api web
+
+Nota: testele finale nu pot fi executate in acest pachet si au nevoie de
+un Docker functional pe propriul laptop. Testele scriptului sunt punctuale;
+nu reprezinta un audit complet de securitate.
